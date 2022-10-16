@@ -1,0 +1,119 @@
+/* Global CSS variables */
+/* :root {
+  --primary: #CFB53B;
+  --primary-hover: #512da8;
+  --primary-focus: rgba(94, 53, 177, 0.125);
+  --primary-inverse: #FFF;
+  --spacing-company: 3rem;
+  --font-weight: 400;
+  --form-element-spacing-vertical: 0.5rem;
+} */
+
+/* Deep-purple Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #CFB53B;
+  --primary-hover: #bda32e;
+  --primary-focus:  rgba(207, 180, 59, 0.5);
+  --primary-inverse: #FFF;
+}
+
+/* Deep-purple Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #CFB53B;
+    --primary-hover: #bda32e;
+    --primary-focus:  rgba(207, 180, 59, 0.5);
+    --primary-inverse: #FFF;
+  }
+}
+
+/* Deep-purple Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #CFB53B;
+  --primary-hover: #bda32e;
+  --primary-focus: rgba(207, 180, 59, 0.5);
+  --primary-inverse: #FFF;
+}
+
+/* Deep-purple (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  --spacing-company: 3rem;
+  --font-weight: 400;
+  --form-element-spacing-vertical: 0.5rem;
+}
+
+.min{
+  padding: 0.28rem 0.50rem;
+}
+
+/* Typography */
+h2,
+h3,
+hgroup> :last-child {
+  font-weight: 200;
+}
+
+small {
+  color: var(--muted-color);
+}
+
+/* Header */
+.hero {
+  background-color: #39404600;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  padding: var(--spacing-company) 0;
+}
+
+header hgroup> :last-child {
+  color: var(--h3-color);
+}
+
+header hgroup {
+  margin-bottom: var(--spacing-company);
+}
+
+/* Nav */
+summary[role="link"].contrast:is([aria-current], :hover, :active, :focus) {
+  background-color: transparent;
+  color: var(--contrast-hover);
+}
+
+/* Main */
+@media (min-width: 992px) {
+  main .grid {
+    grid-column-gap: var(--spacing-company);
+    grid-template-columns: auto 25%;
+  }
+}
+
+form.grid {
+  grid-row-gap: 0;
+}
+
+/* Aside nav */
+aside img {
+  margin-bottom: 0.25rem;
+}
+
+aside p {
+  margin-bottom: var(--spacing-company);
+  line-height: 1.25;
+}
+
+
+article {
+  /* margin: var(--block-spacing-vertical) 0; */
+  margin: 0 0;
+}

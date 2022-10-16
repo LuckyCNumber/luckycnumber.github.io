@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LuckyC Number</title>
+    <link rel="shortcut icon" href="/icon.png"/>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+<nav class="container">
+    <ul>
+        <li><a href="/" class="contrast"><strong>LuckyC Number</strong></a>
+        </li>
+    </ul>
+    <ul>
+        <li><a target="_blank" role="link" id="wallet-connect-nav" data-placement="bottom">Connect
+            Wallet(MetaMask)</a>
+        </li>
+    </ul>
+</nav>
+<header class="container">
+    <hgroup>
+        <h1>LuckyC Number</h1>
+        <h2>
+            One round ends every 24 hours, only one winner per round. If you are the lucky one, you will get 92% of the
+            total
+            prize pool. Fee: 8% <br>
+            Calculation rules of winning number: `(block.number + block.timestamp) % Total lucky numbers`.<br>
+            The more bets, the higher the winning rate.<br>
+            <strong>Warning:</strong> Only Binance Smart Chain Mainnet is supported.<br>
+            It is suggested to follow <a href="https://twitter.com/LuckyCNumber" target="_blank">@LuckyCNumber</a>
+            to get the
+            winning information.<br>
+            Use <a role="link" id="add-to-wallet">USDT</a> to participate.
+        </h2>
+    </hgroup>
+    <p><a id="view-contract-code" href="https://testnet.bscscan.com/address/" target="_blank" role="button"
+          class="outline">View contract code</a></p>
+
+</header>
+<main class="container">
+    <div class="grid">
+
+        <hgroup style="border:1px solid  #CFB53B;border-radius:5px; padding: 10px;">
+            <label id="total-pool-lable" style="line-height: 2.5rem;">Total Pool:</label>
+            <h1 id="total-pool" style="text-align: center;line-height: 4.8rem;color: #CFB53B;">----</h1>
+            <h2 style="text-align: center;"><strong id="total-pool-symbol">USDT</strong></h2>
+        </hgroup>
+        <div>
+            <hgroup style="border:1px solid #CFB53B;border-radius:5px; padding: 10px;">
+                <label>You Bet:</label>
+                <h1 id="you-bet" style="text-align: center;line-height: 4rem;color: #CFB53B;">----</h1>
+                <h2 style="text-align: center;"><strong id="you-bet-symbol">USDT</strong></h2>
+            </hgroup>
+            <button id="bet-button">Bet</button>
+        </div>
+    </div>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th scope="col">Round</th>
+                <th scope="col">TotalPool</th>
+                <th scope="col">LuckyNumber</th>
+                <th scope="col">Winner</th>
+            </tr>
+            </thead>
+            <tbody id="history">
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>
+            <a href="https://twitter.com/LuckyCNumber" target="_blank" onclick="" role="button"
+               class="outline min">Twitter</a>
+            <a href="https://t.me/LuckyCNumber" target="_blank" role="button" class="outline min">Telegram</a>
+        </p>
+    </div>
+</main>
+<footer class="container">
+    <p><a href="https://t.me/LuckyCNumber" target="_blank">Feedback</a></p>
+</footer>
+
+<dialog id="ban-dialog">
+    <article>
+        <header>
+            <label style="color: rgb(210, 156, 56);">Warning</label>
+        </header>
+        <div>
+            According to the relevant laws and regulations where you are, we are unable to provide services for you
+        </div>
+        <footer>
+            <button class="outline" disabled>Thank you for your visit</button>
+        </footer>
+    </article>
+</dialog>
+</body>
+<script src="//geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+<script src="/common.js" type="module"></script>
+
+</html>
